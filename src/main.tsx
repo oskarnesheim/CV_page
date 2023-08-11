@@ -1,10 +1,38 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./input.css";
 import { ChakraProvider } from "@chakra-ui/react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./ErrorPage.tsx";
+import CV from "./CV.tsx";
+import About from "./About.tsx";
+import ContactMe from "./ContactMe.tsx";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/cv",
+        element: <CV />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact_me",
+        element: <ContactMe />,
+      },
+    ],
+  },
+  {},
+]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <ChakraProvider>
-    <App />
+    <RouterProvider router={router} />
   </ChakraProvider>
 );
