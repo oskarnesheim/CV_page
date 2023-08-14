@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         element: <CV />,
       },
       {
-        path: "/about",
+        path: "/",
         element: <About />,
       },
       {
