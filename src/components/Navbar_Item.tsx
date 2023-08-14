@@ -12,8 +12,10 @@ function Navbar_Item({ newPath, header }: INavPage) {
     navigate(page);
   }
   return (
-    <div onClick={() => switchPage(newPath)} className="text-lg">
-      {header}
+    <div onClick={() => switchPage(newPath)} className="p-2">
+      <p className=" text-white no-underline font-semibold hover:text-gray-300 text-lg">
+        {header}
+      </p>
     </div>
   );
 }

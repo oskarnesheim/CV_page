@@ -1,8 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.sidebar a {
-    @apply text-white no-underline font-semibold hover:text-gray-300;
-}
