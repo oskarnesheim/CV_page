@@ -100,4 +100,4 @@ const educationData: IEducationItem[] = [
     // Add more skills as needed
   ];
 
-export { educationData, workExperienceData, skillsData };
+export { educationData, workExperienceData, otherExperiencesData, skillsData };

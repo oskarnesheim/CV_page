@@ -2,11 +2,11 @@ import { useState } from "react";
 import { IWorkExperienceItem } from "../../public/interfaces";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-type WorkItemT = {
+type OtherExperiencesItemT = {
   item: IWorkExperienceItem;
 };
 
-function WorkItem({ item }: WorkItemT) {
+function OtherExperiencesItem({ item }: OtherExperiencesItemT) {
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -50,4 +50,4 @@ function WorkItem({ item }: WorkItemT) {
   );
 }
 
-export default WorkItem;
+export default OtherExperiencesItem;

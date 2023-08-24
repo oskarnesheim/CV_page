@@ -2,6 +2,7 @@ import {
   educationData,
   workExperienceData,
   skillsData,
+  otherExperiencesData,
 } from "../public/Erfaringer";
 import EducationItem from "./components/EducationItem";
 import WorkItem from "./components/WorkItem";
@@ -24,6 +25,9 @@ export default function CV() {
       </section>
       <section>
         <h2 className="mb-2 text-2xl font-bold underline">Other Experiences</h2>
+        {otherExperiencesData.map((item, index) => (
+          <WorkItem item={item} key={index} />
+        ))}
       </section>
       <section>
         <h2 className="mb-2 text-2xl font-bold underline">Skillzzz</h2>
