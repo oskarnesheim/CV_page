@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="flex">
+    <div className="">
       <Navbar />
-      <div className="ml-52">
+      <div className="ml-60">
         <Outlet />
       </div>
     </div>
