@@ -50,8 +50,15 @@ const educationData: EducationItem[] = [
       logo: "NTNU_logo.png",
       comment: "This fall I am a learning assistant for the course IT1901 Informatics Project 1. Here I will be guiding a group of students through a project, and help them with any problems they might have."
     },
+    {
+      position: "Consript",
+      company: "Norwegian Army",
+      duration: "August 2020 - August 2021",
+      logo: "Emblem_of_the_Norwegian_Army.png",
+      comment: "I had my conscription year in the Army. Here I learned alot about teamwork and became very independent. I also learned to work under pressure and to be flexible. "
+    },
     // {
-    //   position: "Artillery Range",
+    //   position: "Artillery Ranger",
     //   company: "Norwegian Army",
     //   duration: "August 2020 - August 2021",
     //   logo: "Emblem_of_the_Norwegian_Army.png",

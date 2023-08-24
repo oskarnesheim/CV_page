@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-export interface EducationItem {
+export interface IEducationItem {
   degree: string;
   institution: string;
   year: string;

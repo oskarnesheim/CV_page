@@ -8,6 +8,7 @@ import ErrorPage from "./ErrorPage.tsx";
 import CV from "./CV.tsx";
 import About from "./About.tsx";
 import ContactMe from "./ContactMe.tsx";
+import Projects from "./Projects.tsx";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/contact_me",
         element: <ContactMe />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
       },
     ],
   },
