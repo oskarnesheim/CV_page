@@ -7,9 +7,9 @@ type EducationItem = {
 
 function EducationItem({ item }: EducationItem) {
   return (
-    <div className="flex flex-row justify-between min-h-[100px] mb-10 border-solid border-l-4 pl-2">
+    <div className="flex flex-row justify-between min-h-[100px] mb-10 border-solid border-l-4 border-b-4 pl-2 pb-2">
       <div className="w-[60%]">
-        <div className="flex flex-row justify-between">
+        <div className="flex flex-row justify-between mb-4">
           <p>{item.degree} </p>
           <p> ~ {item.institution}</p>
         </div>

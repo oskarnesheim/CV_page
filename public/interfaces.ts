@@ -7,7 +7,7 @@ export interface IEducationItem {
   logo?: string;
 }
 
-export interface WorkExperienceItem {
+export interface IWorkExperienceItem {
   position: string;
   company: string;
   duration: string;

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { EducationItem, WorkExperienceItem, Skill } from "./interfaces";
+import { IEducationItem, IWorkExperienceItem, Skill } from "./interfaces";
 
-const educationData: EducationItem[] = [
+const educationData: IEducationItem[] = [
     {
       degree: "Bachelor in Information Technology",
       institution: "NTNU",
@@ -21,12 +21,12 @@ const educationData: EducationItem[] = [
     // Add more education items as needed
   ];
 
-  const workExperienceData: WorkExperienceItem[] = [
+  const workExperienceData: IWorkExperienceItem[] = [
     {
       position: "Care Worker",
       company: "Gullhella Bo- og omsorgssenter - Asker Kommune",
       duration: "June 2022 - August 2023",
-      logo: "Asker_Kommune.png",
+      logo: "Asker_kommune.png",
       comment: "Working as a care worker at a nursing home in Asker. Here i have learned to work in a team, and to take responsibility for others. I have also learned to work under pressure, and to be flexible"
     },
     {
@@ -37,14 +37,14 @@ const educationData: EducationItem[] = [
       comment: "At Maxbo I learned to work well under pressure and talk to people of all ages."
     },
     {
-      position: "Learning assistant - TDT4100 Object Oriented Programming",
+      position: "Learning assistant - TDT4100",
       company: "NTNU",
       duration: "January 2023 - June 2023",
       logo: "NTNU_logo.png",
       comment: "At NTNU I have been a learning assistant for the course TDT4100 Object Oriented Programming. Here I have learned to teach others, and to explain complex concepts in a simple way. I have also gained a deeper understanding of the course material, through teaching it."
     },
     {
-      position: "Learning assistant - IT1901 Informatics Project 1",
+      position: "Learning assistant - IT1901 ",
       company: "NTNU",
       duration: "August 2023 - present",
       logo: "NTNU_logo.png",
@@ -66,7 +66,7 @@ const educationData: EducationItem[] = [
     // },
   ];
 
-  const otherExperiencesData: WorkExperienceItem[] = [
+  const otherExperiencesData: IWorkExperienceItem[] = [
     {
       position: "Leader of the Sports Committee",
       company: "Online",
