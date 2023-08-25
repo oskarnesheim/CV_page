@@ -92,12 +92,15 @@ const educationData: IEducationItem[] = [
   ]
 
   const skillsData: Skill[] = [
-    { name: "React", level: "Intermediate" },
-    { name: "TypeScript", level: "Advanced" },
-    { name: "Python", level: "Intermediate" },
-    { name: "Java", level: "Advance" },
-    { name: "HTML", level: "Intermediate" },
+    { name: "React", level: 3 },
+    { name: "TypeScript", level: 3 },
+    { name: "Python", level: 2 },
+    { name: "Java", level: 3 },
+    { name: "HTML", level: 2 },
+    { name: "CSS", level: 2 },
     // Add more skills as needed
   ];
+
+  
 
 export { educationData, workExperienceData, otherExperiencesData, skillsData };

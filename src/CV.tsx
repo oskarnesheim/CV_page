@@ -5,6 +5,7 @@ import {
   otherExperiencesData,
 } from "../public/Erfaringer";
 import EducationItem from "./components/EducationItem";
+import SkillsItem from "./components/SkillsItem";
 import WorkItem from "./components/WorkItem";
 
 export default function CV() {
@@ -30,12 +31,10 @@ export default function CV() {
         ))}
       </section>
       <section>
-        <h2 className="mb-2 text-2xl font-bold underline">Skillzzz</h2>
+        <h2 className="mb-2 text-2xl font-bold underline">Coding skills</h2>
         <ul className="skills-list">
-          {skillsData.map((skill, index) => (
-            <li key={index}>
-              {skill.name} - {skill.level}
-            </li>
+          {skillsData.map((item, index) => (
+            <SkillsItem item={item} key={index} />
           ))}
         </ul>
       </section>

@@ -18,6 +18,8 @@ export interface IWorkExperienceItem {
 
 export interface Skill {
   name: string;
-  level: string;
+  level: number;
 }
+
+export const SkillDict = {1: "Beginner", 2: "Intermediate", 3: "Advanced", 4: "Expert"};
 
