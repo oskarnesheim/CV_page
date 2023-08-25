@@ -27,7 +27,7 @@ function WorkItem({ item }: WorkItemT) {
         </div>
         <div className="mt-6 ">
           <button
-            onClick={() => toggleDetails()}
+            onClick={() => setShowDetails(!showDetails)}
             className="hover:underline font-bold"
           >
             {!showDetails ? "Show details" : "Hide details"}

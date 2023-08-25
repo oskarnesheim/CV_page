@@ -9,7 +9,7 @@ function About() {
       <div className="flex justify-center">
         <div className="mx-4 md:mx-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-[50%] ml-[25%] mr-[25%]">
           <img
-            src="Kul_katt.jpg"
+            src="oskar/Kul_katt.jpg"
             alt="Profile"
             className="mx-auto rounded-full border-4 border-white h-32 w-32 shadow-lg"
           />

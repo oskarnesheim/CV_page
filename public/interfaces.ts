@@ -19,6 +19,15 @@ export interface IWorkExperienceItem {
 export interface Skill {
   name: string;
   level: number;
+  Description: string;
+}
+
+export interface IProjectItem{
+  name: string;
+  description: string;
+  link: string;
+  images: string[];
+  tags: string[];
 }
 
 export const SkillDict = {1: "Beginner", 2: "Intermediate", 3: "Advanced", 4: "Expert"};

@@ -27,7 +27,7 @@ function ContactMe() {
           className="mr-20 min-w-[170px]"
         >
           <img
-            src="Github_icon.svg"
+            src="logoer/Github_icon.svg"
             alt="Check me out on github!"
             width={150}
             className="hover:w-[170px] transition-all duration-200 ease-in-out"
@@ -41,7 +41,7 @@ function ContactMe() {
         >
           <img
             width={150}
-            src="LinkedIn_icon.svg"
+            src="logoer/LinkedIn_icon.svg"
             alt="Check me out on LinkedIn!"
             className="hover:w-[170px] transition-all duration-200 ease-in-out"
           />
