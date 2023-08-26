@@ -28,23 +28,19 @@ function ContactMe() {
 
   function updateClipboard(newClip: string) {
     if (newClip === "mail") {
+      navigator.clipboard.writeText(contactInfo.email);
       if (clipboard.tlf) {
-        console.log("mail and tlf");
-        setClipboard({ ...clipboard, tlf: false });
-        console.log(clipboard.mail);
-        console.log(clipboard.tlf);
+        clipboard.tlf = false;
+        // setClipboard(() => ({ ...clipboard, tlf: false }));
       }
       setClipboard({ ...clipboard, mail: true });
-      navigator.clipboard.writeText(contactInfo.email);
     } else if (newClip === "tlf") {
+      navigator.clipboard.writeText(contactInfo.phoneNumber);
       if (clipboard.mail) {
-        setClipboard({ ...clipboard, mail: false });
-        console.log("tlf and mail");
-        console.log(clipboard.mail);
-        console.log(clipboard.tlf);
+        clipboard.mail = false;
+        // setClipboard(() => ({ ...clipboard, mail: false }));
       }
       setClipboard({ ...clipboard, tlf: true });
-      navigator.clipboard.writeText(contactInfo.phoneNumber);
     }
   }
 
