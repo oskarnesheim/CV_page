@@ -1,12 +1,12 @@
 function About() {
   return (
-    <div className="h-screen flex-row items-center justify-center">
+    <div className="">
       <img
-        src="Kul_kat.jpg"
+        src="oskar/Oversiktsbilde.jpeg"
         alt="Råtøff bakgrunn"
-        className=" border-red-500 border-4"
+        className="w-full"
       />
-      <div className="flex justify-center">
+      <div className="flex justify-center absolute top-[400px]">
         <div className="mx-4 md:mx-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-[50%] ml-[25%] mr-[25%]">
           <img
             src="oskar/Kul_katt.jpg"

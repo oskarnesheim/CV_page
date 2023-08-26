@@ -17,7 +17,9 @@ function SkillsItem({ item }: SkillsItemType) {
   };
   return (
     <div className="flex flex-row mb-10 border-solid border-l-4 border-b-4 pl-2 pb-2 justify-between">
-      {item.name} - {item.Description}
+      <div className="flex flex-row">
+        <p className="font-bold">{item.name}</p> - {item.Description}
+      </div>
       <div className="flex flex-row">{generateStars()}</div>
     </div>
   );

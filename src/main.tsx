@@ -9,7 +9,7 @@ import CV from "./CV.tsx";
 import About from "./About.tsx";
 import ContactMe from "./ContactMe.tsx";
 import Projects from "./Projects.tsx";
-
+import { RecoilRoot } from "recoil";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,7 +37,9 @@ const router = createBrowserRouter([
   {},
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <ChakraProvider>
-    <RouterProvider router={router} />
-  </ChakraProvider>
+  <RecoilRoot>
+    <ChakraProvider>
+      <RouterProvider router={router} />
+    </ChakraProvider>
+  </RecoilRoot>
 );

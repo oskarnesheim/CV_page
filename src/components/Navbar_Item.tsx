@@ -13,7 +13,7 @@ function Navbar_Item({ newPath, header }: INavPage) {
   }
   return (
     <div onClick={() => switchPage(newPath)} className="m-4 ml-7">
-      <p className=" text-white no-underline font-semibold hover:text-gray-300 text-xl">
+      <p className=" text-white hover:underline underline-offset-4 font-semibold hover:text-gray-300 text-xl">
         {header}
       </p>
     </div>

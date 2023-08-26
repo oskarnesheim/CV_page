@@ -5,7 +5,7 @@ const educationData: IEducationItem[] = [
     {
       degree: "Bachelor in Information Technology",
       institution: "NTNU",
-      year: "2021-present",
+      year: "2021-present(finishing in 2024)",
       grade: "3,7/5,0",
       logo: "logoer/NTNU_logo.png",
 
@@ -38,14 +38,14 @@ const educationData: IEducationItem[] = [
     },
     {
       position: "Care Worker",
-      company: "Gullhella Bo- og omsorgssenter - Asker Kommune",
+      company: "Gullhella Bo- og omsorgssenter",
       duration: "June 2022 - August 2023",
       logo: "logoer/Asker_kommune.png",
       comment: "Working as a care worker at a nursing home in Asker. Here i have learned to work in a team, and to take responsibility for others. I have also learned to work under pressure, and to be flexible"
     },
     {
       position: "Salesman",
-      company: "Lovenskiold Handel AS / Maxbo Asker",
+      company: "Maxbo Asker",
       duration: "May 2018 - Juli 2020",
       logo: "logoer/Maxbo_logo.png",
       comment: "At Maxbo I learned to work well under pressure and talk to people of all ages."
@@ -104,7 +104,7 @@ const educationData: IEducationItem[] = [
     },
     {
       name: "Crypto Cojo",
-      description: "Crypto Cojo is a website application where you can 'buy' real life cryptocoins and see how you portifolio would would do in real life. The application was a group project that three of my classmates and I worked on. The application was has a Java backend with Springboot REST api and React/Typescript frontend. This was my first project in a team where we used git to a great extend, and I learned alot. This was also my first encounter with API, which I have found to be very much used later on.",
+      description: "Crypto Cojo is a website application where you can 'buy' real life cryptocoins and see how you portifolio would would do in real life. The application was a group project that three of my classmates and I worked on. The application was has a Java backend with Springboot REST API and React/Typescript frontend. This was my first project in a team where we used git to a great extend, and I learned alot. This was also my first encounter with API's, which I have found to be very much used later on.",
       link: "https://github.com/oskarnesheim/journey_journal",
       images: ["CryptoCojo/CryptoCojo_home.png","CryptoCojo/CryptoCojo_login.png", "CryptoCojo/CryptoCojo_settings.png"],
       tags: ["React","Typescript","SpringBoot","Maven", "Git", "API", "Java"]

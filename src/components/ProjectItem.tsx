@@ -31,16 +31,26 @@ function ProjectItem({ item }: ProjectItemT) {
   function getImages(onlyFirst: boolean = false) {
     if (!onlyFirst) {
       return item.images.map((image) => (
-        <img key={image} src={image} alt={image} className=" object-contain" />
+        <img
+          key={image}
+          src={image}
+          alt={image}
+          className="mb-6 rounded-xl drop-shadow-2xl"
+        />
       ));
     }
     return (
-      <img key={item.images[0]} src={item.images[0]} alt={item.images[0]} />
+      <img
+        key={item.images[0]}
+        src={item.images[0]}
+        alt={item.images[0]}
+        className="rounded-xl shadow-2xl"
+      />
     );
   }
 
   return (
-    <div className="mb-10  p-2 border-2 border-black">
+    <div className="mb-10  p-2 border-solid border-l-4 border-b-4 pl-2 pb-2">
       <h1 className="font-bold text-2xl">{item.name}</h1>
       <div className="flex flex-row">{getTags()}</div>
 
@@ -52,12 +62,19 @@ function ProjectItem({ item }: ProjectItemT) {
           onClick={() => setShowDetails(!showDetails)}
           className="hover:underline font-bold"
         >
-          {!showDetails ? "Show details" : "Hide details"}
+          {!showDetails ? "Show details ＋" : "Hide details ﹣"}
         </button>
         {showDetails && (
           <div className="mt-2 ">
-            <div>{item.description}</div>
+            <div className="mb-10">{item.description}</div>
             <div>{getImages()}</div>
+
+            <button
+              className="hover:underline font-bold"
+              onClick={() => setShowDetails(!showDetails)}
+            >
+              Close ﹣
+            </button>
           </div>
         )}
       </div>

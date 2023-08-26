@@ -16,23 +16,35 @@ const contactInfo: IContactMeProps = {
 };
 
 type ContactMeProps = {
-  copyFirst: boolean;
-  copySecond: boolean;
+  mail: boolean;
+  tlf: boolean;
 };
 
 function ContactMe() {
   const [clipboard, setClipboard] = useState<ContactMeProps>({
-    copyFirst: false,
-    copySecond: false,
+    mail: false,
+    tlf: false,
   });
 
   function updateClipboard(newClip: string) {
-    console.log("clipped");
-    navigator.clipboard.writeText("+4790156493");
-    if (newClip === "first") {
-      setClipboard({ ...clipboard, copyFirst: true });
-    } else if (newClip === "second") {
-      setClipboard({ ...clipboard, copySecond: true });
+    if (newClip === "mail") {
+      if (clipboard.tlf) {
+        console.log("mail and tlf");
+        setClipboard({ ...clipboard, tlf: false });
+        console.log(clipboard.mail);
+        console.log(clipboard.tlf);
+      }
+      setClipboard({ ...clipboard, mail: true });
+      navigator.clipboard.writeText(contactInfo.email);
+    } else if (newClip === "tlf") {
+      if (clipboard.mail) {
+        setClipboard({ ...clipboard, mail: false });
+        console.log("tlf and mail");
+        console.log(clipboard.mail);
+        console.log(clipboard.tlf);
+      }
+      setClipboard({ ...clipboard, tlf: true });
+      navigator.clipboard.writeText(contactInfo.phoneNumber);
     }
   }
 
@@ -81,10 +93,10 @@ function ContactMe() {
           <p className="mr-5 hover:underline">{contactInfo.email}</p>
         </a>
         <img
-          src={clipboard.copyFirst ? checkedIcon : notCheckedIcon}
+          src={clipboard.mail ? checkedIcon : notCheckedIcon}
           alt="Copy"
           className="max-h-[30px]"
-          onClick={() => updateClipboard("first")}
+          onClick={() => updateClipboard("mail")}
         />
 
         {/* <p className="text-black"> or</p> */}
@@ -92,10 +104,10 @@ function ContactMe() {
           <p className="ml-5 hover:underline">{contactInfo.phoneNumber}</p>
         </a>
         <img
-          src={clipboard.copySecond ? checkedIcon : notCheckedIcon}
+          src={clipboard.tlf ? checkedIcon : notCheckedIcon}
           alt="Copy"
           className="max-h-[30px]"
-          onClick={() => updateClipboard("second")}
+          onClick={() => updateClipboard("tlf")}
         />
       </div>
     </div>

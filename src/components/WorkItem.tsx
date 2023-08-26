@@ -9,28 +9,20 @@ type WorkItemT = {
 function WorkItem({ item }: WorkItemT) {
   const [showDetails, setShowDetails] = useState(false);
 
-  const toggleDetails = () => {
-    console.log("toggleDetails");
-    setShowDetails(!showDetails);
-  };
-
   return (
-    <div className="flex flex-row justify-between min-h-[100px] mb-10  p-2 border-2 border-black">
+    <div className="flex flex-row justify-between min-h-[100px] mb-10 p-2 border-solid border-l-4 border-b-4 pl-2 pb-2">
       <div className="w-[60%]">
         <div className="flex flex-row justify-between">
           <p>{item.position} </p>
-          <p> ~ {item.company}</p>
+          <p className="font-bold"> {item.company}</p>
         </div>
-
-        <div className="flex flex-row justify-between">
-          <p>{item.duration}</p>
-        </div>
+        <p className="underline text-sm text-gray-500">{item.duration}</p>
         <div className="mt-6 ">
           <button
             onClick={() => setShowDetails(!showDetails)}
             className="hover:underline font-bold"
           >
-            {!showDetails ? "Show details" : "Hide details"}
+            {!showDetails ? "Show details ＋" : "Hide details －"}
           </button>
           {showDetails && (
             <div className="mt-2 ">
@@ -40,10 +32,10 @@ function WorkItem({ item }: WorkItemT) {
         </div>
       </div>
       <div className="flex flex-row">
-        {item.company !== "Lovenskiold Handel AS / Maxbo Asker" ? (
+        {item.company !== "Maxbo Asker" ? (
           <img className="max-h-[100px]" src={item.logo} alt="" />
         ) : (
-          <img className="max-w-[270px] max-h-[90px]" src={item.logo} alt="" />
+          <img className="max-w-[200px] max-h-[90px] " src={item.logo} alt="" />
         )}
       </div>
     </div>

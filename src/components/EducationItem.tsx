@@ -9,13 +9,13 @@ function EducationItem({ item }: EducationItem) {
   return (
     <div className="flex flex-row justify-between min-h-[100px] mb-10 border-solid border-l-4 border-b-4 pl-2 pb-2">
       <div className="w-[60%]">
-        <div className="flex flex-row justify-between mb-4">
+        <div className="flex flex-row justify-between mb-2">
           <p>{item.degree} </p>
-          <p> ~ {item.institution}</p>
+          <p className="font-bold">{item.institution}</p>
         </div>
 
         <div className="flex flex-row justify-between">
-          <p>{item.year}</p>
+          <p className="underline text-sm text-gray-500">{item.year}</p>
           <p>Grade {item.grade}</p>
         </div>
       </div>
