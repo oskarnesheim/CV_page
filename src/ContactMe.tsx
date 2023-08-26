@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 interface IContactMeProps {
   email: string;
@@ -13,7 +15,30 @@ const contactInfo: IContactMeProps = {
   github: "https://github.com/oskarnesheim",
 };
 
+type ContactMeProps = {
+  copyFirst: boolean;
+  copySecond: boolean;
+};
+
 function ContactMe() {
+  const [clipboard, setClipboard] = useState<ContactMeProps>({
+    copyFirst: false,
+    copySecond: false,
+  });
+
+  function updateClipboard(newClip: string) {
+    console.log("clipped");
+    navigator.clipboard.writeText("+4790156493");
+    if (newClip === "first") {
+      setClipboard({ ...clipboard, copyFirst: true });
+    } else if (newClip === "second") {
+      setClipboard({ ...clipboard, copySecond: true });
+    }
+  }
+
+  const notCheckedIcon = "logoer/Clipboard.svg";
+  const checkedIcon = "logoer/Checked.svg";
+
   return (
     <div className="min-w-full p-[25%] pt-[10%]">
       {/*  */}
@@ -52,11 +77,26 @@ function ContactMe() {
         <p className="text-2xl mb-5">Or contact me via </p>
       </div>
       <div className="flex flex-row text-xl text-gray-500">
-        <p className="mr-5 hover:underline" onClick={() => {}}>
-          {contactInfo.email}
-        </p>
-        <p className="text-black">or</p>
-        <p className="ml-5 hover:underline">{contactInfo.phoneNumber}</p>
+        <a target="_blank" href="mailto:nesheimo@gmail.com">
+          <p className="mr-5 hover:underline">{contactInfo.email}</p>
+        </a>
+        <img
+          src={clipboard.copyFirst ? checkedIcon : notCheckedIcon}
+          alt="Copy"
+          className="max-h-[30px]"
+          onClick={() => updateClipboard("first")}
+        />
+
+        {/* <p className="text-black"> or</p> */}
+        <a href="tel:+4790156493">
+          <p className="ml-5 hover:underline">{contactInfo.phoneNumber}</p>
+        </a>
+        <img
+          src={clipboard.copySecond ? checkedIcon : notCheckedIcon}
+          alt="Copy"
+          className="max-h-[30px]"
+          onClick={() => updateClipboard("second")}
+        />
       </div>
     </div>
   );
