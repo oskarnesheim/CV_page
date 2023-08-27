@@ -10,7 +10,12 @@ function SkillsItem({ item }: SkillsItemType) {
     const stars = [];
     for (let i = 0; i < item.level; i++) {
       stars.push(
-        <img className="max-w-[20px]" src="logoer/Star.svg" alt="star" />
+        <img
+          className="max-w-[20px]"
+          src="logoer/Star.svg"
+          alt="star"
+          key={i}
+        />
       );
     }
     return stars;

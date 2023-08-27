@@ -3,14 +3,14 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./input.css";
 import { ChakraProvider } from "@chakra-ui/react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./ErrorPage.tsx";
 import CV from "./CV.tsx";
 import About from "./About.tsx";
 import ContactMe from "./ContactMe.tsx";
 import Projects from "./Projects.tsx";
 import { RecoilRoot } from "recoil";
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -36,6 +36,8 @@ const router = createBrowserRouter([
   },
   {},
 ]);
+
+// const router = createBrowserRouter();
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <RecoilRoot>
     <ChakraProvider>
