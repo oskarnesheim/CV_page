@@ -9,9 +9,9 @@ function About() {
       <div className="flex justify-center absolute top-[400px]">
         <div className="mx-4 md:mx-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-[50%] ml-[25%] mr-[25%]">
           <img
-            src="oskar/Kul_katt.jpg"
+            src="oskar/Oskar_portrettbilde.jpg"
             alt="Profile"
-            className="mx-auto rounded-full border-4 border-white h-32 w-32 shadow-lg"
+            className="mx-auto rounded-full h-[300px] "
           />
           <h1 className="text-3xl font-semibold mb-4">Oskar Iglebæk Nesheim</h1>
           <p className="text-lg">
