@@ -37,7 +37,6 @@ const router = createHashRouter([
   {},
 ]);
 
-// const router = createBrowserRouter();
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <RecoilRoot>
     <ChakraProvider>

@@ -66,8 +66,9 @@ function ProjectItem({ item }: ProjectItemT) {
           />
         </a>
       </div>
-
-      <div className="mt-10">{getImages(true)}</div>
+      <div onClick={() => setShowDetails(!showDetails)} className="mt-10">
+        {getImages(true)}
+      </div>
       <div className="mt-6 ">
         <button
           onClick={() => setShowDetails(!showDetails)}
