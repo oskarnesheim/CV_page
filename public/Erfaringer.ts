@@ -99,7 +99,7 @@ const educationData: IEducationItem[] = [
       name: "Journey Journal",
       description: "Journey Journal is a social media application where users can look at backpacking journeys, like them and give hvem ratings. Users can also create their own journeys and share them with others. This was a group project in the course TDT4140 Programvareutvikling at NTNU. Here we used React with Typescript as our frontend, and Firebase as our backend. The main focus for the project was to learn how to work in a group using scrum. ",
       link: "https://github.com/oskarnesheim/journey_journal",
-      images: ["2048.png"],
+      images: ["JourneyJournal/JJ_homepage.png", "JourneyJournal/JJ_darkmode.png","JourneyJournal/JJ_filter.png","JourneyJournal/JJ_search.png","JourneyJournal/JJ_sorting.png","JourneyJournal/JJ_store_journeys.png"],
       tags: ["React","Typescript","Firebase","Git", "Scrum"]
     },
     {
@@ -107,7 +107,7 @@ const educationData: IEducationItem[] = [
       description: "Crypto Cojo is a website application where you can 'buy' real life cryptocoins and see how you portifolio would would do in real life. The application was a group project that three of my classmates and I worked on. The application was has a Java backend with Springboot REST API and React/Typescript frontend. This was my first project in a team where we used git to a great extend, and I learned alot. This was also my first encounter with API's, which I have found to be very much used later on.",
       link: "https://github.com/oskarnesheim/journey_journal",
       images: ["CryptoCojo/CryptoCojo_home.png","CryptoCojo/CryptoCojo_login.png", "CryptoCojo/CryptoCojo_settings.png"],
-      tags: ["React","Typescript","SpringBoot","Maven", "Git", "API", "Java"]
+      tags: ["React","Typescript","SpringBoot","Maven", "Git", "Java"]
     },
     {
       name: "2048",

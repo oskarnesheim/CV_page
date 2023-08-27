@@ -19,12 +19,11 @@ function ProjectItem({ item }: ProjectItemT) {
 
   function getTags() {
     return item.tags.map((tag) => (
-      <span
-        key={tag}
-        className="inline-block px-2 py-1 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full"
-      >
-        {tag}
-      </span>
+      <div className="h-[40px]" key={tag}>
+        <span className="inline-block px-2 py-1 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">
+          {tag}
+        </span>
+      </div>
     ));
   }
 
@@ -52,15 +51,27 @@ function ProjectItem({ item }: ProjectItemT) {
   return (
     <div className="mb-10  p-2 border-solid border-l-4 border-b-4 pl-2 pb-2">
       <h1 className="font-bold text-2xl">{item.name}</h1>
-      <div className="flex flex-row">{getTags()}</div>
-
-      <div className="flex flex-row justify-between mt-10">
-        {getImages(true)}
+      <div className="flex flex-row justify-between">
+        <div className="flex flex-row">{getTags()}</div>
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="h-[40px]"
+        >
+          <img
+            src="logoer/Github_icon.svg"
+            alt="To Github Repo"
+            className="h-[30px] hover:h-[40px] transition-all duration-200 ease-in-out"
+          />
+        </a>
       </div>
+
+      <div className="mt-10">{getImages(true)}</div>
       <div className="mt-6 ">
         <button
           onClick={() => setShowDetails(!showDetails)}
-          className="hover:underline font-bold"
+          className="hover:underline font-bold mb-10"
         >
           {!showDetails ? "Show details ＋" : "Hide details ﹣"}
         </button>
