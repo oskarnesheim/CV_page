@@ -12,24 +12,24 @@ import Projects from "./Projects.tsx";
 import { RecoilRoot } from "recoil";
 const router = createHashRouter([
   {
-    path: "/CV_page/",
+    path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "cv",
+        path: "/cv",
         element: <CV />,
       },
       {
-        path: "",
+        path: "/",
         element: <About />,
       },
       {
-        path: "contact_me",
+        path: "/contact_me",
         element: <ContactMe />,
       },
       {
-        path: "projects",
+        path: "/projects",
         element: <Projects />,
       },
     ],
