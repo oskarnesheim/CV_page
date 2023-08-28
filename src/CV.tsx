@@ -11,7 +11,12 @@ import WorkItem from "./components/WorkItem";
 export default function CV() {
   return (
     <div className="w-1/2 m-auto mt-20">
-      <h1 className="mb-10 text-4xl font-bold">CV</h1>
+      <div className="flex flex-row justify-between">
+        <h1 className="mb-10 text-4xl font-bold">CV</h1>
+        <a href="oskar/CV_Oskar_Nesheim_online.pdf" target="_blank">
+          <p className="font-bold hover:underline">CV.pdf</p>
+        </a>
+      </div>
 
       <section>
         <h2 className="mb-2 text-2xl font-bold underline">Work Experience</h2>
