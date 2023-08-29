@@ -16,7 +16,7 @@ type ProjectItemT = {
 
 function ProjectItem({ item }: ProjectItemT) {
   const [showDetails, setShowDetails] = useState(false);
-  const topOfProject = "/projects/#topOf" + item.name[0];
+  const topOfProject = "/projects/#topOf" + item.name;
 
   function getTags() {
     return item.tags.map((tag) => (
