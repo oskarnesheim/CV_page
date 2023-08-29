@@ -16,6 +16,7 @@ type ProjectItemT = {
 
 function ProjectItem({ item }: ProjectItemT) {
   const [showDetails, setShowDetails] = useState(false);
+  const topOfProject = "/projects/#topOf" + item.name[0];
 
   function getTags() {
     return item.tags.map((tag) => (
@@ -50,7 +51,9 @@ function ProjectItem({ item }: ProjectItemT) {
 
   return (
     <div className="mb-10  p-2 border-solid border-l-4 border-b-4 pl-2 pb-2">
-      <h1 className="font-bold text-2xl">{item.name}</h1>
+      <h1 id={topOfProject} className="font-bold text-2xl">
+        {item.name}
+      </h1>
       <div className="flex flex-row justify-between">
         <div className="flex flex-row">{getTags()}</div>
         <a
@@ -80,13 +83,16 @@ function ProjectItem({ item }: ProjectItemT) {
           <div className="mt-2 ">
             <div className="mb-10">{item.description}</div>
             <div>{getImages()}</div>
-
-            <button
-              className="hover:underline font-bold"
-              onClick={() => setShowDetails(!showDetails)}
-            >
-              Close ﹣
-            </button>
+            <a href={"#" + topOfProject}>
+              <button
+                className="hover:underline font-bold"
+                onClick={() => {
+                  setShowDetails(!showDetails);
+                }}
+              >
+                Close ﹣
+              </button>
+            </a>
           </div>
         )}
       </div>
