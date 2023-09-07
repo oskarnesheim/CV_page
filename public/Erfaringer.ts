@@ -23,6 +23,13 @@ const educationData: IEducationItem[] = [
 
   const workExperienceData: IWorkExperienceItem[] = [
     {
+      position: "Tech Consultant",
+      company: "Junior Consulting",
+      duration: "September 2023 - present",
+      logo: "logoer/Jcr_logo.jpg",
+      comment: "I have just been hired at Junior Consulting as Tech Consultant. Here I hope to learn as much as possible about the consulting business, and to get some experience with real projects. "
+    },
+    {
       position: "Learning assistant - TDT4100",
       company: "NTNU",
       duration: "January 2023 - June 2023",

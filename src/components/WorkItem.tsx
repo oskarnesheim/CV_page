@@ -11,7 +11,7 @@ function WorkItem({ item }: WorkItemT) {
 
   return (
     <div className="flex flex-row justify-between min-h-[100px] mb-10 p-2 border-solid border-l-4 border-b-4 pl-2 pb-2">
-      <div className="w-[60%]">
+      <div className="w-full lg:w-[60%]">
         <div className="flex flex-row justify-between">
           <p>{item.position} </p>
           <p className="font-bold"> {item.company}</p>
@@ -31,7 +31,7 @@ function WorkItem({ item }: WorkItemT) {
           )}
         </div>
       </div>
-      <div className="flex flex-row">
+      <div className="hidden lg:inline">
         {item.company !== "Maxbo Asker" ? (
           <img className="max-h-[100px]" src={item.logo} alt="" />
         ) : (
