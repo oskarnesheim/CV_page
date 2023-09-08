@@ -5,7 +5,8 @@ function App() {
   return (
     <div className="">
       <Navbar />
-      <div className="ml-60">
+      {/* min-w-full p-[25%] pt-[10%] w-1/2 m-auto mt-20 w-1/2 m-auto mt-20 */}
+      <div className="lg:ml-60">
         <Outlet />
       </div>
     </div>

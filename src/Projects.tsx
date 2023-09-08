@@ -3,7 +3,7 @@ import ProjectItem from "./components/ProjectItem";
 
 function Projects() {
   return (
-    <div className="w-1/2 m-auto mt-20">
+    <div className="lg:w-1/2 m-auto w-[95%] lg:mt-20">
       <h1 className="mb-3 text-4xl font-bold">Projects</h1>
       {/* <div className="bg-gray-800 h-2 rounded-xl my-2"></div> */}
       <div className="">
