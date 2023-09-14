@@ -12,36 +12,33 @@ function Navbar() {
       <div className={" w-full fixed top-0 left-0 right-0 z-40"}>
         <Menu>
           <MenuButton as={Button} height={"100px"}>
-            <img
-              src="/public/logoer/Menu_icon.png"
-              alt="Click to change path"
-            />
+            <img src="logoer/Menu_icon.png" alt="Click to change path" />
           </MenuButton>
           <MenuList>
             <MenuItem>
               <Navbar_Item
-                icon="public/logoer/person_icon.png"
+                icon="logoer/person_icon.png"
                 newPath="/"
                 header="About me"
               />
             </MenuItem>
             <MenuItem>
               <Navbar_Item
-                icon="public/logoer/CV_icon.png"
+                icon="logoer/CV_icon.png"
                 newPath="/cv"
                 header="CV"
               />
             </MenuItem>
             <MenuItem>
               <Navbar_Item
-                icon="public/logoer/projects_icon.png"
+                icon="logoer/projects_icon.png"
                 newPath="/projects"
                 header="Projects"
               />
             </MenuItem>
             <MenuItem>
               <Navbar_Item
-                icon="public/logoer/contact_me_icon.png"
+                icon="logoer/contact_me_icon.png"
                 newPath="/contact_me"
                 header="Contact Me"
               />
