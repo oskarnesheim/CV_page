@@ -8,7 +8,7 @@ type EducationItem = {
 function EducationItem({ item }: EducationItem) {
   return (
     <div className="flex flex-row justify-between min-h-[100px] mb-10 border-solid border-l-4 border-b-4 pl-2 pb-2">
-      <div className="w-full lg:w-[60%]">
+      <div className="w-full md:w-[60%]">
         <div className="flex flex-row justify-between mb-2">
           <p>{item.degree} </p>
           <p className="font-bold">{item.institution}</p>
@@ -19,7 +19,7 @@ function EducationItem({ item }: EducationItem) {
           <p>Grade {item.grade}</p>
         </div>
       </div>
-      <div className="hidden lg:inline">
+      <div className="hidden md:inline">
         <img className="max-h-[100px]" src={item.logo} alt="" />
       </div>
     </div>

@@ -3,11 +3,9 @@ import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="">
+    <div className="md:flex md:flex-row relative">
       <Navbar />
-      <div className="ml-60">
-        <Outlet />
-      </div>
+      <Outlet />
     </div>
   );
 }

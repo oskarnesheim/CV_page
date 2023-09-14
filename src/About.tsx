@@ -4,10 +4,10 @@ function About() {
       <img
         src="oskar/Oversiktsbilde.jpeg"
         alt="Råtøff bakgrunn"
-        className="w-full"
+        className={` hidden md:block mt-24 md:mt-0 w-full`}
       />
-      <div className="flex justify-center absolute top-[400px]">
-        <div className="mx-4 md:mx-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-[50%] ml-[25%] mr-[25%]">
+      <div className="fixed md:ml-[20%] top-20">
+        <div className="mt-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-full md:w-[50%] md:ml-[25%] md:mr-[25%]">
           <img
             src="oskar/Oskar_portrettbilde.jpg"
             alt="Profile"
