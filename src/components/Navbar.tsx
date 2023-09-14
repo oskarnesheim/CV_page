@@ -9,9 +9,9 @@ function Navbar() {
   };
   {
     return !bigScreen ? (
-      <div className={" w-full fixed top-0 left-0 right-0 z-40"}>
+      <div className={" w-full pt-8 fixed top-0 left-0 right-0 z-40"}>
         <Menu>
-          <MenuButton as={Button} height={"100px"}>
+          <MenuButton as={Button} height={"60px"}>
             <img src="logoer/Menu_icon.png" alt="Click to change path" />
           </MenuButton>
           <MenuList>
@@ -49,7 +49,7 @@ function Navbar() {
     ) : (
       <div
         className={
-          "bg-gray-800 w-[21%] lg:w-[16%] text-white w- py-4 fixed top-0 left-0 bottom-0"
+          "bg-gray-800 w-[21%] lg:w-[16%] text-white py-4 fixed top-0 left-0 bottom-0"
         }
       >
         <Navbar_Item newPath="/" header="About me" />
