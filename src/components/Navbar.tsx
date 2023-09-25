@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Navbar_Item from "./Navbar_Item";
-import { Menu, MenuButton, Button, MenuList, MenuItem } from "@chakra-ui/react";
-
 function Navbar() {
   const [bigScreen, setBigScreen] = useState(true);
   window.onresize = () => {
@@ -9,42 +7,23 @@ function Navbar() {
   };
   {
     return !bigScreen ? (
-      <div className={" w-full pt-8 fixed top-0 left-0 right-0 z-40"}>
-        <Menu>
-          <MenuButton as={Button} height={"60px"}>
-            <img src="logoer/Menu_icon.png" alt="Click to change path" />
-          </MenuButton>
-          <MenuList>
-            <MenuItem>
-              <Navbar_Item
-                icon="logoer/person_icon.png"
-                newPath="/"
-                header="About me"
-              />
-            </MenuItem>
-            <MenuItem>
-              <Navbar_Item
-                icon="logoer/CV_icon.png"
-                newPath="/cv"
-                header="CV"
-              />
-            </MenuItem>
-            <MenuItem>
-              <Navbar_Item
-                icon="logoer/projects_icon.png"
-                newPath="/projects"
-                header="Projects"
-              />
-            </MenuItem>
-            <MenuItem>
-              <Navbar_Item
-                icon="logoer/contact_me_icon.png"
-                newPath="/contact_me"
-                header="Contact Me"
-              />
-            </MenuItem>
-          </MenuList>
-        </Menu>
+      <div
+        className={
+          "bg-gray-400 w-full max-h-20 text-white flex flex-row justify-between shadow-lg"
+        }
+      >
+        <Navbar_Item newPath="/" header="About me" icon="logoer/user.png" />
+        <Navbar_Item newPath="/cv" header="CV" icon="logoer/education.png" />
+        <Navbar_Item
+          newPath="/projects"
+          header="Projects"
+          icon="logoer/coding.png"
+        />
+        <Navbar_Item
+          newPath="/contact_me"
+          header="Contact Me"
+          icon="logoer/contact-mail.png"
+        />
       </div>
     ) : (
       <div

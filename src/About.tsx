@@ -6,7 +6,7 @@ function About() {
         alt="Råtøff bakgrunn"
         className={` hidden md:block mt-24 md:mt-0 w-full`}
       />
-      <div className="fixed md:ml-[20%] top-20">
+      <div className="fixed top-20">
         <div className="mt-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-full md:w-[50%] md:ml-[25%] md:mr-[25%]">
           <img
             src="oskar/Oskar_portrettbilde.jpg"

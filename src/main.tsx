@@ -40,7 +40,9 @@ const router = createHashRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <RecoilRoot>
     <ChakraProvider>
-      <RouterProvider router={router} />
+      <RecoilRoot>
+        <RouterProvider router={router} />
+      </RecoilRoot>
     </ChakraProvider>
   </RecoilRoot>
 );
