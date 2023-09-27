@@ -1,12 +1,16 @@
-import { useState } from "react";
 import Navbar_Item from "./Navbar_Item";
+import { useRecoilState } from "recoil";
+import { bigScreen } from "../atoms/atoms";
 function Navbar() {
-  const [bigScreen, setBigScreen] = useState(true);
+  //   const [bigScreen, setBigScreen] = useState(window.innerWidth > 768);
+  const [navbarToTheSide, setNavbarToTheSide] = useRecoilState(bigScreen);
+
   window.onresize = () => {
-    setBigScreen(window.innerWidth > 768);
+    setNavbarToTheSide(window.innerWidth > 790);
   };
+
   {
-    return !bigScreen ? (
+    return !navbarToTheSide ? (
       <div
         className={
           "bg-gray-400 w-full max-h-20 text-white flex flex-row justify-between shadow-lg"
