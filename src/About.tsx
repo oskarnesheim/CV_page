@@ -12,8 +12,9 @@ function About() {
           // className={`hidden md:block`}
         />
       )}
-      <div className="fixed top-20">
-        <div className="mt-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-full sm:w-5/6 md:w-4/6 lg:w-1/2 m-auto">
+      <div className="absolute top-10">
+        <div className="mt-8 bg-white bg-opacity-80 p-8 rounded-lg shadow-lg text-center md:text-left w-full sm:w-5/6 md:w-4/6 lg:w-1/2 m-auto mb-20">
+          ;
           <img
             src="oskar/Oskar_portrettbilde.jpg"
             alt="Profile"
