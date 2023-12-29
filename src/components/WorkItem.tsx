@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { IWorkExperienceItem } from "../../public/interfaces";
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 type WorkItemT = {
   item: IWorkExperienceItem;
 };

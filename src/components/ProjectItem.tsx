@@ -1,18 +1,9 @@
 import { useState } from "react";
 import { IProjectItem } from "../../public/interfaces";
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 type ProjectItemT = {
   item: IProjectItem;
 };
-
-// export interface IProjectItem {
-//   name: string;
-//   description: string;
-//   link: string;
-//   images: string[];
-//   tags: string[];
-// }
 
 function ProjectItem({ item }: ProjectItemT) {
   const [showDetails, setShowDetails] = useState(false);
@@ -21,7 +12,7 @@ function ProjectItem({ item }: ProjectItemT) {
   function getTags() {
     return item.tags.map((tag) => (
       <div className="h-[40px]" key={tag}>
-        <span className="inline-block px-2 py-1 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">
+        <span className="flex flex-wrap px-2 py-1 mr-2 text-xs font-semibold text-gray-700 bg-gray-200 rounded-full">
           {tag}
         </span>
       </div>
@@ -31,19 +22,22 @@ function ProjectItem({ item }: ProjectItemT) {
   function getImages(onlyFirst: boolean = false) {
     if (!onlyFirst) {
       return item.images.map((image) => (
-        <img
-          key={image}
-          src={image}
-          alt={image}
-          className="mb-6 rounded-xl drop-shadow-2xl"
-        />
+        <>
+          <img
+            key={image.src}
+            src={image.src}
+            alt={image.src}
+            className=" rounded-xl drop-shadow-2xl"
+          />
+          <p className="mb-6">{image.Description}</p>
+        </>
       ));
     }
     return (
       <img
-        key={item.images[0]}
-        src={item.images[0]}
-        alt={item.images[0]}
+        key={item.images[0].src}
+        src={item.images[0].src}
+        alt={item.images[0].src}
         className="rounded-xl shadow-2xl"
       />
     );
@@ -55,7 +49,7 @@ function ProjectItem({ item }: ProjectItemT) {
         {item.name}
       </h1>
       <div className="flex flex-row justify-between">
-        <div className="flex flex-row">{getTags()}</div>
+        <div className="flex flex-row flex-wrap max-w-[90%]">{getTags()}</div>
         <a
           href={item.link}
           target="_blank"
@@ -82,6 +76,7 @@ function ProjectItem({ item }: ProjectItemT) {
         {showDetails && (
           <div className="mt-2 ">
             <div className="mb-10">{item.description}</div>
+            <h3 className="mb-6">Pictures</h3>
             <div>{getImages()}</div>
             <a href={"#" + topOfProject}>
               <button

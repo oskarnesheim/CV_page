@@ -37,7 +37,9 @@ export default function CV() {
         ))}
       </section>
       <section>
-        <h2 className="mb-2 text-2xl font-bold underline">Coding skills</h2>
+        <h2 className="mb-2 text-2xl font-bold underline">
+          Coding skills because I am the greatest alive
+        </h2>
         <ul className="skills-list">
           {skillsData.map((item, index) => (
             <SkillsItem item={item} key={index} />

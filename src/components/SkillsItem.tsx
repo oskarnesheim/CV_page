@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Skill } from "../../public/interfaces";
 
 type SkillsItemType = {
@@ -15,7 +14,7 @@ function SkillsItem({ item }: SkillsItemType) {
           src="logoer/Star.svg"
           alt="star"
           key={i}
-        />
+        />,
       );
     }
     return stars;

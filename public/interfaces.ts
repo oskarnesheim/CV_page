@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 export interface IEducationItem {
   degree: string;
   institution: string;
@@ -13,7 +12,6 @@ export interface IWorkExperienceItem {
   duration: string;
   logo?: string;
   comment?: string;
-
 }
 
 export interface Skill {
@@ -22,13 +20,21 @@ export interface Skill {
   Description: string;
 }
 
-export interface IProjectItem{
+export interface IProjectItem {
   name: string;
   description: string;
   link: string;
-  images: string[];
+  images: IImage[];
   tags: string[];
 }
+interface IImage {
+  src: string;
+  Description: string;
+}
 
-export const SkillDict = {1: "Beginner", 2: "Intermediate", 3: "Advanced", 4: "Expert"};
-
+export const SkillDict = {
+  1: "Beginner",
+  2: "Intermediate",
+  3: "Advanced",
+  4: "Expert",
+};

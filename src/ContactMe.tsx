@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 interface IContactMeProps {
   email: string;
   phoneNumber: string;

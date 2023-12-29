@@ -1,6 +1,5 @@
 import { IEducationItem } from "../../public/interfaces";
 
-/* eslint-disable @typescript-eslint/no-unused-vars */
 type EducationItem = {
   item: IEducationItem;
 };
