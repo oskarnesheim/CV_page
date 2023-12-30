@@ -1,4 +1,5 @@
 import { projectsData } from "../public/Erfaringer";
+import Go_to_top_button from "./components/Go_to_top_button";
 import ProjectItem from "./components/ProjectItem";
 
 function Projects() {
@@ -11,6 +12,7 @@ function Projects() {
           <ProjectItem item={item} key={index} />
         ))}
       </div>
+      <Go_to_top_button />
     </div>
   );
 }
