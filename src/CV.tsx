@@ -5,6 +5,7 @@ import {
   otherExperiencesData,
 } from "../public/Erfaringer";
 import EducationItem from "./components/EducationItem";
+import Go_to_top_button from "./components/Go_to_top_button";
 import SkillsItem from "./components/SkillsItem";
 import WorkItem from "./components/WorkItem";
 
@@ -46,6 +47,7 @@ export default function CV() {
           ))}
         </ul>
       </section>
+      <Go_to_top_button />
     </div>
   );
 }
