@@ -5,9 +5,7 @@ function App() {
   return (
     <div className="">
       <Navbar />
-      <div className="md:ml-[16%]">
-        <Outlet />
-      </div>
+      <div className="md:ml-[16%]">{<Outlet />}</div>
     </div>
   );
 }
